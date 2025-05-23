@@ -26,7 +26,75 @@ See this [interview](https://ai.meta.com/blog/detectron-everingham-prize/) to le
 
 ## Installation
 
-See [installation instructions](https://detectron2.readthedocs.io/tutorials/install.html).
+### 1. Install Visual Studio Build Tools 2019
+
+Assuming you are using CUDA 11.8, you will need to install Visual Studio Build Tools 2019. Follow the steps in this video tutorial:
+
+👉 [Visual Studio Build Tools 2019 Installation Video](https://youtu.be/lW_xccf8uFA?si=MoGhn54JHjQYrTk2)
+
+Make sure the **“Desktop development with C++"** workload is installed and that these components are selected:
+
+- MSVC v142 - VS 2019 C++ x64/x86 build tools (v14.29)
+- Windows 10 SDK (10.0.19041.0)
+
+Once the installation is complete, **restart your computer**.
+
+---
+
+### 2. Create Conda Environment
+
+```bash
+conda create -n detectron2_env python=3.10 -y
+conda activate detectron2_env
+```
+
+---
+
+### 3. Install PyTorch
+
+Ensure the PyTorch version and CUDA version match your system. For example, for CUDA 11.8:
+
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
+
+Or, use the CPU-only version if you do not have a GPU:
+
+```bash
+pip install torch torchvision torchaudio
+```
+
+---
+
+### 4. Install Other Dependencies
+
+```bash
+pip install opencv-python pycocotools matplotlib tqdm
+```
+
+---
+
+### 5. Install Detectron2 (Windows Build)
+
+```bash
+git clone https://github.com/ainhoaarnaiz/detectron2_for_windows.git
+cd detectron2
+pip install -e .
+```
+
+---
+
+### 6. Test the Installation (in a Python script)
+
+```python
+import detectron2
+from detectron2.utils.logger import setup_logger
+
+setup_logger()
+
+# Confirm GPU and detectron2 work
+from detectron2.engine import DefaultPredictor
+```
 
 ## Getting Started
 
