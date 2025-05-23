@@ -28,7 +28,7 @@ See this [interview](https://ai.meta.com/blog/detectron-everingham-prize/) to le
 
 ### 1. Install Visual Studio Build Tools 2019
 
-Assuming you are using CUDA 11.8, you will need to install Visual Studio Build Tools 2019. Follow the steps in this video tutorial:
+If you are using CUDA 11.8, you will need to install **Visual Studio Build Tools 2019**. Follow the steps in this video tutorial:
 
 👉 [Visual Studio Build Tools 2019 Installation Video](https://youtu.be/lW_xccf8uFA?si=MoGhn54JHjQYrTk2)
 
@@ -38,6 +38,8 @@ Make sure the **“Desktop development with C++"** workload is installed and tha
 - Windows 10 SDK (10.0.19041.0)
 
 Once the installation is complete, **restart your computer**.
+
+**Note (not tested):** If you have the latest CUDA (as per May 2025), try installing **Visual Studio Build Tools 2022** and its **“Desktop development with C++"** workload (with MSVC v143 and Windows 11 SDK).
 
 ---
 
