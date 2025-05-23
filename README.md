@@ -72,7 +72,7 @@ pip install opencv-python pycocotools matplotlib tqdm
 
 ```bash
 git clone https://github.com/ainhoaarnaiz/detectron2_for_windows.git
-cd detectron2
+cd detectron2_for_windows
 pip install -e .
 ```
 
