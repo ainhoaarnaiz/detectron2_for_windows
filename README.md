@@ -58,12 +58,6 @@ Ensure the PyTorch version and CUDA version match your system. For example, for 
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
 
-Or, use the CPU-only version if you do not have a GPU:
-
-```bash
-pip install torch torchvision torchaudio
-```
-
 ---
 
 ### 4. Install Other Dependencies
